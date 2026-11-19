@@ -1,0 +1,42 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-ink font-sans antialiased leading-relaxed; }
+  h1, h2, h3, h4 { @apply text-navy font-bold leading-tight; }
+  h1 { @apply text-3xl md:text-4xl; }
+  h2 { @apply text-2xl; }
+  h3 { @apply text-lg font-medium; }
+  a { @apply text-royal; }
+  :focus-visible { @apply outline-none ring-2 ring-royal ring-offset-2; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-royal text-white hover:bg-royal-dark; }
+  .btn-secondary { @apply btn bg-white text-navy border border-line hover:bg-surface; }
+  .btn-danger { @apply btn bg-danger text-white hover:bg-red-800; }
+  .btn-success { @apply btn bg-ok text-white hover:bg-green-800; }
+  .btn-ghost { @apply btn text-royal hover:bg-soft; }
+  .btn-sm { @apply px-3 py-1.5 text-xs; }
+  .btn-lg { @apply px-6 py-3 text-base; }
+  .card { @apply bg-white border border-line rounded-card shadow-card; }
+  .card-pad { @apply p-5; }
+  .label { @apply block text-sm font-medium text-ink mb-1; }
+  .input { @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-slate-400 focus:border-royal focus:outline-none focus:ring-2 focus:ring-soft disabled:bg-surface; }
+  .input-error { @apply border-danger focus:border-danger focus:ring-red-100; }
+  .help { @apply mt-1 text-xs text-muted; }
+  .err { @apply mt-1 text-xs text-danger; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium; }
+  .th { @apply px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-muted bg-surface whitespace-nowrap; }
+  .td { @apply px-4 py-3 text-sm text-ink align-middle; }
+  .section { @apply py-14 md:py-20; }
+  .container-x { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
+}
