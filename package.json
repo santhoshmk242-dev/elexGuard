@@ -1,0 +1,16 @@
+{
+  "name": "elexguard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ElexGuard – convenience scripts for the monorepo (run each app in its own terminal).",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "build:frontend": "npm run build --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "create-admin": "npm run create-admin --prefix backend",
+    "test": "npm test --prefix backend"
+  }
+}
